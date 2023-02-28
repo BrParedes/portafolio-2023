@@ -4,109 +4,157 @@
         <h1 class="underline-offset-8 underline  decoration-red-300 transition">Conocimientos</h1>
     </div>
     
-    <div class="scrollT2 grid grid-cols-4 w-3/4 mx-auto rounded-lg  px-12 my-12 ">
+    <div class="scrollT2 grid grid-cols-4 w-3/4 mx-auto rounded-lg   my-12 ">
         
         <ul class="col-span-1 text-3xl text-red-300 border-r-2 border-red-300">
-            <li [ngClass]="{'bg-slate-700 text-white ': cursosButton == true }"  (click)="menuKnowledge(1);" class="hover:bg-slate-700 border-red-300 hover:text-white hover:cursor-pointer transition duration-500  border-y-2 "><p [ngClass]="{'translate-x-6': cursosButton == true }" class="py-8 transition duration-500 hover:translate-x-6 h-full">Cursos</p></li>
-            <li [ngClass]="{'bg-slate-700  ': langButton == true }"  (click)="menuKnowledge(2);" class="hover:bg-slate-700 border-red-300 hover:text-white hover:cursor-pointer transition duration-500  border-b-2 "><p [ngClass]="{'translate-x-6 ': langButton == true }"class="py-8 transition duration-500 hover:translate-x-6 h-full">Lenguajes</p></li>
-            <li [ngClass]="{'bg-slate-700': frameButton == true }"  (click)="menuKnowledge(3);" class="hover:bg-slate-700 border-red-300 hover:text-white hover:cursor-pointer transition duration-500  border-b-2 "><p [ngClass]="{'translate-x-6': frameButton == true }"class="py-8 transition duration-500 hover:translate-x-6 h-full">Frameworks</p></li>
-            <li [ngClass]="{'bg-slate-700': bdButton == true }"  (click)="menuKnowledge(4);" class="hover:bg-slate-700 border-red-300 hover:text-white hover:cursor-pointer transition duration-500  border-b-2 "><p [ngClass]="{'translate-x-6': bdButton == true }"class="py-8 transition duration-500 hover:translate-x-6 h-full">Base de datos</p></li>
-            <li [ngClass]="{'bg-slate-700': controlButton == true }"  (click)="menuKnowledge(5);" class="hover:bg-slate-700 border-red-300 hover:text-white hover:cursor-pointer transition duration-500  border-b-2 "><p [ngClass]="{'translate-x-6': controlButton== true }" class="py-8 transition duration-500 hover:translate-x-6 h-full">Control de versión</p></li>
+            <li [ngClass]="{'text-white bg-slate-700 text-white ': cursosButton == true }"  (click)="menuKnowledge(1);" class="hover:bg-slate-700 border-red-300 hover:text-white hover:cursor-pointer transition duration-500  border-y-2 "><p [ngClass]="{'translate-x-6': cursosButton == true }" class="py-8 transition duration-500 hover:translate-x-6 h-full">Cursos</p></li>
+            <li [ngClass]="{'text-white bg-slate-700 text-white  ': langButton == true }"  (click)="menuKnowledge(2);" class="hover:bg-slate-700 border-red-300 hover:text-white hover:cursor-pointer transition duration-500  border-b-2 "><p [ngClass]="{'translate-x-6 ': langButton == true }"class="py-8 transition duration-500 hover:translate-x-6 h-full">Lenguajes</p></li>
+            <li [ngClass]="{'text-white bg-slate-700 text-white': frameButton == true }"  (click)="menuKnowledge(3);" class="hover:bg-slate-700 border-red-300 hover:text-white hover:cursor-pointer transition duration-500  border-b-2 "><p [ngClass]="{'translate-x-6': frameButton == true }"class="py-8 transition duration-500 hover:translate-x-6 h-full">Frameworks</p></li>
+            <li [ngClass]="{'text-white bg-slate-700 text-white': estiloButton == true }"  (click)="menuKnowledge(4);" class="hover:bg-slate-700 border-red-300 hover:text-white hover:cursor-pointer transition duration-500  border-b-2 "><p [ngClass]="{'translate-x-6': estiloButton == true }"class="py-8 transition duration-500 hover:translate-x-6 h-full">Estilos</p></li>
+            <li [ngClass]="{'text-white bg-slate-700 text-white': controlButton == true }"  (click)="menuKnowledge(5);" class="hover:bg-slate-700 border-red-300 hover:text-white hover:cursor-pointer transition duration-500  border-b-2 "><p [ngClass]="{'translate-x-6': controlButton== true }" class="py-8 transition duration-500 hover:translate-x-6 h-full">Otros</p></li>
         </ul>
         
 
         <div class="col-span-3 border-t-2 border-r-2 border-b-2 border-red-300 rounded-r-lg ">
             <div  class="grid grid-rows w-full text-white  transition-all duration-1000 relative h-full " >
             
-                <div [ngClass]="{'hidden': cursosButton == false }" class="grid mx-4 gap-4  hover:ease-in transition-all   duration-500" >
-                    <img  class="w-24" src="" alt="">
+                <!-- CURSOS -->
+                <div [ngClass]="{'hidden': cursosButton == false }" class="grid grid-cols-1 grid-row-3 h-full gap-2" >
+                    
+                    <a href="https://www.udemy.com/course/angular-fernando-herrera/" class="hover:cursor-pointer hover:bg-slate-600 flex items-center rounded rounded-br-xl bg-slate-700  row-span-1 col-span-1 grid grid-cols-1 p-4">
+                        <div class="grid grid-cols-4">
+                         <img class="w-20 h-20 col-span-1" src="assets/udemy.svg" alt="">
+                         <div class="col-span-2 flex justify-start items-center">
+                             <p class="hover:text-white text-red-300 text-3xl font-light ">
+                                Angular de cero a experto </p>
+                         </div>
+                         <div class="col-span-1 flex items-center ">
+                            <p id="cursosText1" class="text-red-300 text-5xl" ></p>
+                         </div>
+                        </div>
+                         <!-- barra -->
+                         <div  class="relative w-full px-4 bg-slate-800 rounded rounded-l-full rounded-r-full h-2 ">
+                             <div id="cursosBar1" class=" absolute left-0 top-0 rounded rounded-l-full rounded-r-full h-2 bg-red-300"></div>
+                         </div>
+                    </a>
+
+                    <a href="https://www.udemy.com/course/angular-avanzado-fernando-herrera/" class="hover:cursor-pointer hover:bg-slate-600  flex items-center rounded rounded-br-xl bg-slate-700  row-span-1 col-span-1 grid grid-cols-1 p-4">
+                    <div class="grid grid-cols-4">
+                        <img class="w-20 h-20 col-span-1" src="assets/udemy.svg" alt="">
+                        <div class="col-span-2 flex justify-start items-center">
+                            <p class="text-red-300 text-3xl font-light ">
+                            Angular Avanzado - MEAN</p>
+                        </div>
+                        <div class="col-span-1 flex items-center ">
+                        <p id="cursosText2" class="text-red-300 text-5xl" ></p>
+                        </div>
+                    </div>
+                        <!-- barra -->
+                        <div  class="relative w-full px-4 bg-slate-800 rounded rounded-l-full rounded-r-full h-2 ">
+                            <div id="cursosBar2" class=" absolute left-0 top-0 rounded rounded-l-full rounded-r-full h-2 bg-red-300"></div>
+                        </div>
+                    </a>
+
+                     <div class="invisible flex items-center rounded rounded-br-xl bg-slate-700  row-span-1 col-span-1 grid grid-cols-1 p-4">
+                        <div class="grid grid-cols-4">
+                         <img class="w-20 h-20 col-span-1" src="assets/udemy.svg" alt="">
+                         <div class="col-span-3 flex justify-start items-center">
+                             <p  class="text-red-300 text-3xl font-light ">
+                                Angular Avanzado - MEAN</p>
+                         </div>
+                        </div>
+                         <!-- barra -->
+                         <div  class="relative w-full px-4 bg-slate-800 rounded rounded-l-full rounded-r-full h-2 ">
+                             <div  class=" absolute left-0 top-0 rounded rounded-l-full rounded-r-full h-2 bg-red-300"></div>
+                         </div>
+                     </div>
                 </div>
 
-                <!-- ACA -->
+                <!-- LENGUAJES -->
                 <div [ngClass]="{'hidden': langButton == false}" class="grid grid-cols-2 grid-row-3 h-full gap-2" >
                     
                     <div class="flex items-center rounded rounded-br-xl bg-slate-700  row-span-1 col-span-1 grid grid-cols-1 p-4">
                        <div class="grid grid-cols-4">
-                        <img class="w-20 h-20 col-span-3" src="../../assets/html5.svg" alt="">
+                        <img class="w-20 h-20 col-span-3" src="assets/html5.svg" alt="">
                         <div class="col-span-1 flex justify-center items-center">
                             <p id="percentText1" class="text-red-300 text-5xl font-light "></p>
                         </div>
                        </div>
                         <!-- barra -->
-                        <div  class="relative w-full px-4 bg-slate-800 rounded rounded-l-full rounded-r-full h-4 ">
-                            <div id="progressBar1" class=" absolute left-0 top-0 rounded rounded-l-full rounded-r-full h-4 bg-red-300"></div>
+                        <div  class="relative w-full px-4 bg-slate-800 rounded rounded-l-full rounded-r-full h-2 ">
+                            <div id="progressBar1" class=" absolute left-0 top-0 rounded rounded-l-full rounded-r-full h-2 bg-red-300"></div>
                         </div>
                     </div>
 
-                    <div  class="flex items-center rounded rounded-br-xl bg-slate-700  row-span-1 col-span-1 grid grid-cols-1 p-4">
+                    <div  class="flex items-center rounded rounded-bl-xl bg-slate-700  row-span-1 col-span-1 grid grid-cols-1 p-4">
                         <div class="grid grid-cols-4">
-                         <img class="w-20 h-20 col-span-3" src="../../assets/php.svg" alt="">
+                         <img class="w-20 h-20 col-span-3" src="assets/php.svg" alt="">
                          <div class="col-span-1 flex justify-center items-center">
                              <p  id="percentText2" class=" text-red-300 text-5xl font-light "></p>
                          </div>
                         </div>
                          <!-- barra -->
-                         <div  class="relative w-full px-4 bg-slate-800 rounded rounded-l-full rounded-r-full h-4 ">
-                             <div id="progressBar2" class=" absolute left-0 top-0 rounded rounded-l-full rounded-r-full h-4 bg-red-300">
+                         <div  class="relative w-full px-4 bg-slate-800 rounded rounded-l-full rounded-r-full h-2 ">
+                             <div id="progressBar2" class=" absolute left-0 top-0 rounded rounded-l-full rounded-r-full h-2 bg-red-300">
                                 
                              </div>
                          </div>
                      </div>
-                     <div  class="flex items-center rounded rounded-br-xl bg-slate-700  row-span-1 col-span-1 grid grid-cols-1 p-4">
+                     <div  class="flex items-center rounded rounded-r-xl bg-slate-700  row-span-1 col-span-1 grid grid-cols-1 p-4">
                         <div class="grid grid-cols-4">
-                         <img class="w-20 h-20 col-span-3" src="../../assets/js.svg" alt="">
+                         <img class="w-20 h-20 col-span-3" src="assets/js.svg" alt="">
                          <div class="col-span-1 flex justify-center items-center">
                              <p  id="percentText3" class=" text-red-300 text-5xl font-light "></p>
                          </div>
                         </div>
                          <!-- barra -->
-                         <div  class="relative w-full px-4 bg-slate-800 rounded rounded-l-full rounded-r-full h-4 ">
-                             <div id="progressBar3" class=" absolute left-0 top-0 rounded rounded-l-full rounded-r-full h-4 bg-red-300">
+                         <div  class="relative w-full px-4 bg-slate-800 rounded rounded-l-full rounded-r-full h-2 ">
+                             <div id="progressBar3" class=" absolute left-0 top-0 rounded rounded-l-full rounded-r-full h-2 bg-red-300">
                                 
                              </div>
                          </div>
                      </div>
 
-                     <div  class="flex items-center rounded rounded-br-xl bg-slate-700  row-span-1 col-span-1 grid grid-cols-1 p-4">
+                     <div  class="flex items-center rounded rounded-l-xl bg-slate-700  row-span-1 col-span-1 grid grid-cols-1 p-4">
                         <div class="grid grid-cols-4">
-                         <img class="w-20 h-20 col-span-3" src="../../assets/ts.svg" alt="">
+                         <img class="w-20 h-20 col-span-3" src="assets/ts.svg" alt="">
                          <div class="col-span-1 flex justify-center items-center">
                              <p  id="percentText4" class=" text-red-300 text-5xl font-light "></p>
                          </div>
                         </div>
                          <!-- barra -->
-                         <div  class="relative w-full px-4 bg-slate-800 rounded rounded-l-full rounded-r-full h-4 ">
-                             <div id="progressBar4" class=" absolute left-0 top-0 rounded rounded-l-full rounded-r-full h-4 bg-red-300">
+                         <div  class="relative w-full px-4 bg-slate-800 rounded rounded-l-full rounded-r-full h-2 ">
+                             <div id="progressBar4" class=" absolute left-0 top-0 rounded rounded-l-full rounded-r-full h-2 bg-red-300">
                                 
                              </div>
                          </div>
                      </div>
 
-                     <div  class="flex items-center rounded rounded-br-xl bg-slate-700  row-span-1 col-span-1 grid grid-cols-1 p-4">
+                     <div  class="flex items-center rounded rounded-tr-xl bg-slate-700  row-span-1 col-span-1 grid grid-cols-1 p-4">
                         <div class="grid grid-cols-4">
-                         <img class="w-20 h-20 col-span-3" src="../../assets/java.svg" alt="">
+                         <img class="w-20 h-20 col-span-3" src="assets/java.svg" alt="">
                          <div class="col-span-1 flex justify-center items-center">
                              <p  id="percentText5" class=" text-red-300 text-5xl font-light "></p>
                          </div>
                         </div>
                          <!-- barra -->
-                         <div  class="relative w-full px-4 bg-slate-800 rounded rounded-l-full rounded-r-full h-4 ">
-                             <div id="progressBar5" class=" absolute left-0 top-0 rounded rounded-l-full rounded-r-full h-4 bg-red-300">
+                         <div  class="relative w-full px-4 bg-slate-800 rounded rounded-l-full rounded-r-full h-2 ">
+                             <div id="progressBar5" class=" absolute left-0 top-0 rounded rounded-l-full rounded-r-full h-2 bg-red-300">
                                 
                              </div>
                          </div>
                      </div>
 
-                     <div  class="flex items-center rounded rounded-br-xl bg-slate-700  row-span-1 col-span-1 grid grid-cols-1 p-4">
+                     <div  class="flex items-center rounded rounded-tl-xl bg-slate-700  row-span-1 col-span-1 grid grid-cols-1 p-4">
                         <div class="grid grid-cols-4">
-                         <img class="w-20 h-20 col-span-3" src="../../assets/c-sharp.png" alt="">
+                         <img class="w-20 h-20 col-span-3" src="assets/c-sharp.png" alt="">
                          <div class="col-span-1 flex justify-center items-center">
                              <p  id="percentText6" class=" text-red-300 text-5xl font-light "></p>
                          </div>
                         </div>
                          <!-- barra -->
-                         <div  class="relative w-full px-4 bg-slate-800 rounded rounded-l-full rounded-r-full h-4 ">
-                             <div id="progressBar6" class=" absolute left-0 top-0 rounded rounded-l-full rounded-r-full h-4 bg-red-300">
+                         <div  class="relative w-full px-4 bg-slate-800 rounded rounded-l-full rounded-r-full h-2 ">
+                             <div id="progressBar6" class=" absolute left-0 top-0 rounded rounded-l-full rounded-r-full h-2 bg-red-300">
                                 
                              </div>
                          </div>
@@ -114,17 +162,251 @@
 
                 </div>
 
-                <div [ngClass]="{'hidden': frameButton == false}" class="grid mx-4 gap-4  hover:ease-in transition-all   duration-500" >
-                    <img class="w-24" src="../../assets/angular.svg" alt="">
-                    <img class="w-24" src="../../assets/netcore.png" alt="">   
+                <!-- FRAMEWORKS -->
+                <div [ngClass]="{'hidden': frameButton == false}" class="grid grid-cols-2 grid-row-3 h-full gap-2" >
+                    
+                    <div class="flex items-center rounded rounded-br-xl bg-slate-700  row-span-1 col-span-1 grid grid-cols-1 p-4">
+                        <div class="grid grid-cols-4">
+                            <img class="w-20 h-20 col-span-3" src="assets/angular.svg" alt="">
+                            <div class="col-span-1 flex justify-center items-center">
+                                <p id="frameText1" class="text-red-300 text-5xl font-light "></p>
+                            </div>
+                        </div>
+                         <!-- barra -->
+                         <div  class="relative w-full px-4 bg-slate-800 rounded rounded-l-full rounded-r-full h-2 ">
+                             <div id="frameBar1" class=" absolute left-0 top-0 rounded rounded-l-full rounded-r-full h-2 bg-red-300"></div>
+                         </div>
+                    </div>
+                     
+                    <div class="flex items-center rounded rounded-bl-xl bg-slate-700 row-span-1 col-span-1 grid grid-cols-1 p-4">
+                        <div class="grid grid-cols-4">
+                         <img class="w-20 h-20 col-span-3" src="assets/netcore.png" alt="">
+                         <div class="col-span-1 flex justify-center items-center">
+                             <p id="frameText2" class="text-red-300 text-5xl font-light "></p>
+                         </div>
+                        </div>
+                         <!-- barra -->
+                         <div  class="relative w-full px-4 bg-slate-800 rounded rounded-l-full rounded-r-full h-2 ">
+                             <div id="frameBar2" class=" absolute left-0 top-0 rounded rounded-l-full rounded-r-full h-2 bg-red-300"></div>
+                         </div>
+                    </div>
+
+                    <div class="flex items-center rounded rounded-r-xl bg-slate-700 row-span-1 col-span-1 grid grid-cols-1 p-4">
+                        <div class="grid grid-cols-4">
+                         <img class="w-20 h-20 col-span-3" src="assets/laravel.png" alt="">
+                         <div class="col-span-1 flex justify-center items-center">
+                             <p id="frameText3" class="text-red-300 text-5xl font-light "></p>
+                         </div>
+                        </div>
+                         
+                         <div  class="relative w-full px-4 bg-slate-800 rounded rounded-l-full rounded-r-full h-2 ">
+                             <div id="frameBar3" class=" absolute left-0 top-0 rounded rounded-l-full rounded-r-full h-2 bg-red-300"></div>
+                         </div>
+                    </div>
+
+                    <div class="invisible flex items-center rounded rounded-bl-xl bg-slate-700 row-span-1 col-span-1 grid grid-cols-1 p-4">
+                        <div class="grid grid-cols-4">
+                         <img class="w-20 h-20 col-span-3" src="assets/laravel.png" alt="">
+                         <div class="col-span-1 flex justify-center items-center">
+                             <p id="" class="text-red-300 text-5xl font-light "></p>
+                         </div>
+                        </div>
+                         
+                         <div  class="relative w-full px-4 bg-slate-800 rounded rounded-l-full rounded-r-full h-2 ">
+                             <div id="" class=" absolute left-0 top-0 rounded rounded-l-full rounded-r-full h-2 bg-red-300"></div>
+                         </div>
+                    </div>
+
+                    <div class="invisible flex items-center rounded rounded-bl-xl bg-slate-700 row-span-1 col-span-1 grid grid-cols-1 p-4">
+                        <div class="grid grid-cols-4">
+                         <img class="w-20 h-20 col-span-3" src="assets/laravel.png" alt="">
+                         <div class="col-span-1 flex justify-center items-center">
+                             <p id="" class="text-red-300 text-5xl font-light "></p>
+                         </div>
+                        </div>
+                         
+                         <div  class="relative w-full px-4 bg-slate-800 rounded rounded-l-full rounded-r-full h-2 ">
+                             <div id="" class=" absolute left-0 top-0 rounded rounded-l-full rounded-r-full h-2 bg-red-300"></div>
+                         </div>
+                    </div>
+
+                    <div class="invisible flex items-center rounded rounded-bl-xl bg-slate-700 row-span-1 col-span-1 grid grid-cols-1 p-4">
+                        <div class="grid grid-cols-4">
+                         <img class="w-20 h-20 col-span-3" src="assets/laravel.png" alt="">
+                         <div class="col-span-1 flex justify-center items-center">
+                             <p id="" class="text-red-300 text-5xl font-light "></p>
+                         </div>
+                        </div>
+                         
+                         <div  class="relative w-full px-4 bg-slate-800 rounded rounded-l-full rounded-r-full h-2 ">
+                             <div id="" class=" absolute left-0 top-0 rounded rounded-l-full rounded-r-full h-2 bg-red-300"></div>
+                         </div>
+                    </div>
+
                 </div>
 
-                <div [ngClass]="{'hidden': bdButton == false}" class="grid mx-4 gap-4  hover:ease-in transition-all   duration-500" >
-                    <img class="w-24" src="../../assets/mysql.svg" alt="">
-                </div>
+                <!-- ESTILOS -->
+                <div [ngClass]="{'hidden': estiloButton == false}" class="grid grid-cols-2 grid-row-3 h-full gap-2" >
+                    <div class="flex items-center rounded rounded-br-xl bg-slate-700  row-span-1 col-span-1 grid grid-cols-1 p-4">
+                        <div class="grid grid-cols-4">
+                         <img class="w-20 h-20 col-span-3" src="assets/css3.svg" alt="">
+                         <div class="col-span-1 flex justify-center items-center">
+                             <p id="estiloText1" class="text-red-300 text-5xl font-light "></p>
+                         </div>
+                        </div>
+                         <!-- barra -->
+                         <div  class="relative w-full px-4 bg-slate-800 rounded rounded-l-full rounded-r-full h-2 ">
+                             <div id="estiloBar1" class=" absolute left-0 top-0 rounded rounded-l-full rounded-r-full h-2 bg-red-300"></div>
+                         </div>
+                     </div>
 
-                <div [ngClass]="{'hidden': controlButton == false}" class="grid mx-4 gap-4  hover:ease-in transition-all   duration-500" >
-                    <img class="w-24" src="../../assets/git.svg" alt="">
+                     <div class="flex items-center rounded rounded-bl-xl bg-slate-700  row-span-1 col-span-1 grid grid-cols-1 p-4">
+                        <div class="grid grid-cols-4">
+                         <img class="w-20 h-20 col-span-3" src="assets/tailwind.svg" alt="">
+                         <div class="col-span-1 flex justify-center items-center">
+                             <p id="estiloText2" class="text-red-300 text-5xl font-light "></p>
+                         </div>
+                        </div>
+                         <!-- barra -->
+                         <div  class="relative w-full px-4 bg-slate-800 rounded rounded-l-full rounded-r-full h-2 ">
+                             <div id="estiloBar2" class=" absolute left-0 top-0 rounded rounded-l-full rounded-r-full h-2 bg-red-300"></div>
+                         </div>
+                     </div>
+
+                     <div class="flex items-center rounded rounded-r-xl bg-slate-700  row-span-1 col-span-1 grid grid-cols-1 p-4">
+                        <div class="grid grid-cols-4">
+                         <img class="w-20 h-20 col-span-3" src="assets/bootstrap.svg" alt="">
+                         <div class="col-span-1 flex justify-center items-center">
+                             <p id="estiloText3" class="text-red-300 text-5xl font-light "></p>
+                         </div>
+                        </div>
+                         <!-- barra -->
+                         <div  class="relative w-full px-4 bg-slate-800 rounded rounded-l-full rounded-r-full h-2 ">
+                             <div id="estiloBar3" class=" absolute left-0 top-0 rounded rounded-l-full rounded-r-full h-2 bg-red-300"></div>
+                         </div>
+                     </div>
+
+                     <div class="invisible flex items-center rounded rounded-br-xl bg-slate-700  row-span-1 col-span-1 grid grid-cols-1 p-4">
+                        <div class="grid grid-cols-4">
+                         <img class="w-20 h-20 col-span-3" src="assets/html5.svg" alt="">
+                         <div class="col-span-1 flex justify-center items-center">
+                             <p id="percentText1" class="text-red-300 text-5xl font-light "></p>
+                         </div>
+                        </div>
+                         <!-- barra -->
+                         <div  class="relative w-full px-4 bg-slate-800 rounded rounded-l-full rounded-r-full h-2 ">
+                             <div id="progressBar1" class=" absolute left-0 top-0 rounded rounded-l-full rounded-r-full h-2 bg-red-300"></div>
+                         </div>
+                     </div>
+
+                     <div class="invisible flex items-center rounded rounded-br-xl bg-slate-700  row-span-1 col-span-1 grid grid-cols-1 p-4">
+                        <div class="grid grid-cols-4">
+                         <img class="w-20 h-20 col-span-3" src="assets/html5.svg" alt="">
+                         <div class="col-span-1 flex justify-center items-center">
+                             <p id="percentText1" class="text-red-300 text-5xl font-light "></p>
+                         </div>
+                        </div>
+                         <!-- barra -->
+                         <div  class="relative w-full px-4 bg-slate-800 rounded rounded-l-full rounded-r-full h-2 ">
+                             <div id="progressBar1" class=" absolute left-0 top-0 rounded rounded-l-full rounded-r-full h-2 bg-red-300"></div>
+                         </div>
+                     </div>
+
+                     <div class="invisible flex items-center rounded rounded-br-xl bg-slate-700  row-span-1 col-span-1 grid grid-cols-1 p-4">
+                        <div class="grid grid-cols-4">
+                         <img class="w-20 h-20 col-span-3" src="assets/html5.svg" alt="">
+                         <div class="col-span-1 flex justify-center items-center">
+                             <p id="percentText1" class="text-red-300 text-5xl font-light "></p>
+                         </div>
+                        </div>
+                         <!-- barra -->
+                         <div  class="relative w-full px-4 bg-slate-800 rounded rounded-l-full rounded-r-full h-2 ">
+                             <div id="progressBar1" class=" absolute left-0 top-0 rounded rounded-l-full rounded-r-full h-2 bg-red-300"></div>
+                         </div>
+                     </div>
+                </div>
+                <!-- OTROS -->
+                <div [ngClass]="{'hidden': controlButton == false}" class="grid grid-cols-2 grid-row-3 h-full gap-2" >
+                    
+                    <div class="flex items-center rounded rounded-br-xl bg-slate-700  row-span-1 col-span-1 grid grid-cols-1 p-4">
+                        <div class="grid grid-cols-4">
+                            <img class="w-20 h-20 col-span-3" src="assets/git.svg" alt="">
+                            <div class="col-span-1 flex justify-center items-center">
+                                <p id="otrosText1" class="text-red-300 text-5xl font-light "></p>
+                            </div>
+                        </div>
+                         <!-- barra -->
+                         <div  class="relative w-full px-4 bg-slate-800 rounded rounded-l-full rounded-r-full h-2 ">
+                             <div id="otrosBar1" class=" absolute left-0 top-0 rounded rounded-l-full rounded-r-full h-2 bg-red-300"></div>
+                         </div>
+                    </div>
+
+                    <div class=" flex items-center rounded rounded-bl-xl bg-slate-700  row-span-1 col-span-1 grid grid-cols-1 p-4">
+                        <div class="grid grid-cols-4">
+                            <img class="w-20 h-20 col-span-3" src="assets/mysql.svg" alt="">
+                            <div class="col-span-1 flex justify-center items-center">
+                                <p id="otrosText2" class="text-red-300 text-5xl font-light "></p>
+                            </div>
+                        </div>
+                         <!-- barra -->
+                         <div  class="relative w-full px-4 bg-slate-800 rounded rounded-l-full rounded-r-full h-2 ">
+                             <div id="otrosBar2" class=" absolute left-0 top-0 rounded rounded-l-full rounded-r-full h-2 bg-red-300"></div>
+                         </div>
+                    </div>
+
+                    <div class="invisible flex items-center rounded rounded-br-xl bg-slate-700  row-span-1 col-span-1 grid grid-cols-1 p-4">
+                        <div class="grid grid-cols-4">
+                            <img class="w-20 h-20 col-span-3" src="assets/git.svg" alt="">
+                            <div class="col-span-1 flex justify-center items-center">
+                                <p id="frameText1" class="text-red-300 text-5xl font-light "></p>
+                            </div>
+                        </div>
+                         <!-- barra -->
+                         <div  class="relative w-full px-4 bg-slate-800 rounded rounded-l-full rounded-r-full h-2 ">
+                             <div id="frameBar1" class=" absolute left-0 top-0 rounded rounded-l-full rounded-r-full h-2 bg-red-300"></div>
+                         </div>
+                    </div>
+
+                    <div class="invisible flex items-center rounded rounded-br-xl bg-slate-700  row-span-1 col-span-1 grid grid-cols-1 p-4">
+                        <div class="grid grid-cols-4">
+                            <img class="w-20 h-20 col-span-3" src="assets/git.svg" alt="">
+                            <div class="col-span-1 flex justify-center items-center">
+                                <p id="frameText1" class="text-red-300 text-5xl font-light "></p>
+                            </div>
+                        </div>
+                         <!-- barra -->
+                         <div  class="relative w-full px-4 bg-slate-800 rounded rounded-l-full rounded-r-full h-2 ">
+                             <div id="frameBar1" class=" absolute left-0 top-0 rounded rounded-l-full rounded-r-full h-2 bg-red-300"></div>
+                         </div>
+                    </div>
+
+                    <div class="invisible flex items-center rounded rounded-br-xl bg-slate-700  row-span-1 col-span-1 grid grid-cols-1 p-4">
+                        <div class="grid grid-cols-4">
+                            <img class="w-20 h-20 col-span-3" src="assets/git.svg" alt="">
+                            <div class="col-span-1 flex justify-center items-center">
+                                <p id="frameText1" class="text-red-300 text-5xl font-light "></p>
+                            </div>
+                        </div>
+                         <!-- barra -->
+                         <div  class="relative w-full px-4 bg-slate-800 rounded rounded-l-full rounded-r-full h-2 ">
+                             <div id="frameBar1" class=" absolute left-0 top-0 rounded rounded-l-full rounded-r-full h-2 bg-red-300"></div>
+                         </div>
+                    </div>
+
+                    <div class="invisible flex items-center rounded rounded-br-xl bg-slate-700  row-span-1 col-span-1 grid grid-cols-1 p-4">
+                        <div class="grid grid-cols-4">
+                            <img class="w-20 h-20 col-span-3" src="assets/git.svg" alt="">
+                            <div class="col-span-1 flex justify-center items-center">
+                                <p id="frameText1" class="text-red-300 text-5xl font-light "></p>
+                            </div>
+                        </div>
+                         <!-- barra -->
+                         <div  class="relative w-full px-4 bg-slate-800 rounded rounded-l-full rounded-r-full h-2 ">
+                             <div id="frameBar1" class=" absolute left-0 top-0 rounded rounded-l-full rounded-r-full h-2 bg-red-300"></div>
+                         </div>
+                    </div>
+
+                    
                 </div>
     
             </div>
