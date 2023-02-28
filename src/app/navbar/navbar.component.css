@@ -1,0 +1,9 @@
+.lp {
+    font-family: 'Ubuntu', sans-serif;
+}
+
+#info {
+    scroll-behavior: smooth;
+    transition-duration: 2s; /* Duración de la transición de 2 segundos */
+    scroll-margin-top: 100px;
+  }
