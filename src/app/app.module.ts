@@ -10,7 +10,7 @@ import { ConocimientosComponent } from './conocimientos/conocimientos.component'
 import { FooterComponent } from './footer/footer.component';
 import { ProyectosComponent } from './proyectos/proyectos.component';
 import { ContactoComponent } from './contacto/contacto.component';
-import { TestComponent } from './test/test.component';
+import { CarouselComponent } from './carousel/carousel.component';
 
 
 @NgModule({
@@ -23,7 +23,7 @@ import { TestComponent } from './test/test.component';
     FooterComponent,
     ProyectosComponent,
     ContactoComponent,
-    TestComponent
+    CarouselComponent
   
   ],
   imports: [

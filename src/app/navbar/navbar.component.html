@@ -1,5 +1,5 @@
 <header   [ngClass]="{ 'bg-slate-900 border-b-2 border-red-300 '  : scrollPos > 1 , 'bg-transparent' : scrollPos == 0}" class="lp w-full transition duration-1000 h-24 fixed flex z-20  text-xl items-center px-32  ">
-    <div  class="container flex flex-1 flex-row w-full h-full items-center">
+    <div  class="container flex flex-1 flex-row w-3/4 mx-auto justify-center h-full items-center">
         <!-- Logo -->
         <button  (click)="toTop();" [ngClass]="{ 'text-red-300'  : scrollPos > 1 , 'text-white hover:text-red-300 ' : scrollPos == 0}" class="hover:text-white transition duration-500 text-2xl">
             {{ title }}
