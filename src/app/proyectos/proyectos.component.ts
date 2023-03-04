@@ -20,4 +20,14 @@ export class ProyectosComponent implements OnInit {
 
   }
 
+  toNextSection():void { 
+    
+    const x : any = document.getElementById( 'contact' );
+
+    x.scrollIntoView({
+      behavior: 'smooth', 
+
+    }); 
+  };
+
 }

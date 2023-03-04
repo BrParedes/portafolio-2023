@@ -17,7 +17,7 @@ export class ScrollRevealService {
       delay: 0,
       distance: '500px',
       easing: 'ease-in',
-      origin: 'left ',
+      origin: 'bottom ',
       reset: true,
       viewFactor: 0.2
     });
@@ -29,19 +29,19 @@ export class ScrollRevealService {
       delay: 0,
       distance: '50px',
       easing: 'ease-out',
-      origin: 'bottom',
-      reset: false,
+      origin: 'top',
+      reset: true,
       viewFactor: 0.2
     });
   }
 
   revealButton(element: string) {
     this.sr.reveal(element, {
-      duration: 1500,
+      duration: 2000,
       delay: 0,
       distance: '50px',
       easing: 'ease-out',
-      origin: 'bottom',
+      origin: 'top',
       reset: false,
       viewFactor: 0.2
     });

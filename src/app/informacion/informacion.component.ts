@@ -13,6 +13,19 @@ export class InformacionComponent implements OnInit {
 
   ngOnInit(): void {
     this.scrollRevealService.seccionTitle('.seccionTitle' );
+    this.scrollRevealService.reveal('.text' );
+    this.scrollRevealService.reveal2('.img' );
+
   }
+
+  toNextSection():void { 
+    
+    const x : any = document.getElementById( 'conocimientos' );
+
+    x.scrollIntoView({
+      behavior: 'smooth', 
+
+    }); 
+  };
 
 }

@@ -1,5 +1,5 @@
 <header   [ngClass]="{ 'bg-slate-900 border-b-2 border-red-300 '  : scrollPos > 1 , 'bg-transparent' : scrollPos == 0}" class="lp w-full transition duration-1000 h-24 fixed flex z-20  text-xl items-center px-32  ">
-    <div  class="container flex flex-1 flex-row w-3/4 mx-auto justify-center h-full items-center">
+    <div  class=" container flex flex-1 flex-row w-3/4 mx-auto justify-center h-full items-center">
         <!-- Logo -->
         <button  (click)="toTop();" [ngClass]="{ 'text-red-300'  : scrollPos > 1 , 'text-white hover:text-red-300 ' : scrollPos == 0}" class="hover:text-white transition duration-500 text-2xl">
             {{ title }}
@@ -48,7 +48,18 @@
 
 
     
-        
+    <div id="boton" class="z-10 flex fixed bottom-24 right-40">
+        <div [ngClass]="{'rotate-180': sectionPosition == 4  }" class="invisible h-14 w-14 hover:scale-125 transition-all duration-500 mx-auto">
+            <img  (click)="toNextSection();" class="hover:cursor-pointer  h-14 w-14 revealButton mx-auto flex justify-center bottom-20" src="assets/down-arrow2.png"  >
+            
+        </div>
+        <!-- <a (click)="toInfo();"  class="opacity-75 hover:opacity-100 hover:cursor-pointer bg-gradient-to-r from-slate-700  border border-1 border-red-300 font-thin flex flex-row h-18 px-8 py-4 rounded-l-lg rounded-r-lg bg-slate-800 shadow-inner shadow-2xl shadow-2xl hover:scale-125 transition-all ease-in-out transition-1000">
+            
+            <p class="text-3xl text-white">Comenzar</p>
+          
+        </a> -->
+
+    </div>  
         
     
         

@@ -226,6 +226,14 @@ export class ConocimientosComponent implements OnInit {
     }
   }
 
-  
+  toNextSection():void { 
+    
+    const x : any = document.getElementById( 'proyectos' );
+
+    x.scrollIntoView({
+      behavior: 'smooth', 
+
+    }); 
+  };
 
 }

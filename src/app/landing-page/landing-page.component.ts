@@ -7,7 +7,7 @@ import { ScrollRevealService } from '../services/scrollreveal.service';
   styleUrls: ['./landing-page.component.css']
 })
 export class LandingPageComponent implements OnInit {
-
+  
   constructor(private scrollRevealService: ScrollRevealService) { }
 
   ngOnInit(): void {
@@ -26,5 +26,6 @@ export class LandingPageComponent implements OnInit {
     }); 
   };
 
+  
 
 }
