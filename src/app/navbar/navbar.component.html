@@ -1,54 +1,62 @@
-<header   [ngClass]="{ 'bg-slate-900 border-b-2 border-red-300 '  : scrollPos > 1 , 'bg-transparent' : scrollPos == 0}" class="lp w-full transition duration-1000 h-24 fixed flex z-20  text-xl items-center px-32  ">
-    <div  class=" container flex flex-1 flex-row w-3/4 mx-auto justify-center h-full items-center">
+<header   [ngClass]="{ 'bg-slate-900 border-b-2 border-red-300 '  : scrollPos > 1 , 'bg-transparent' : scrollPos == 0}" class="text-sm  md:text-xl  whitespace-nowrap select-none lp w-full transition duration-1000 md:h-24 fixed flex z-20   items-center px-4    lg:px-32  ">
+    <div  class=" container-fluid flex flex-1 flex-row md:w-3/4 mx-auto justify-start h-full items-center">
         <!-- Logo -->
-        <button  (click)="toTop();" [ngClass]="{ 'text-red-300'  : scrollPos > 1 , 'text-white hover:text-red-300 ' : scrollPos == 0}" class="hover:text-white transition duration-500 text-2xl">
+        <button  (click)="toTop();" [ngClass]="{ 'text-red-300'  : scrollPos > 1 , 'text-white hover:text-slate-900 ' : scrollPos == 0}" class="hover:text-white transition duration-500 text-xl lg:text-2xl">
             {{ title }}
         </button>
         <!-- Menu -->
         
-        <ul class="flex flex-row ml-auto list-none h-full hover:cursor-pointer ">
-            <a (click)="toInfo();" [ngClass]="{ 'text-red-300 hover:text-white'  : scrollPos > 1 , 'text-white hover:text-slate-800' : scrollPos == 0}" class=" px-10 hover:bg-white/25 hover:transition ease-in-out duration-1000 h-full flex items-center   "><li>Sobre mi</li></a>
-            <a (click)="toKnowledge();" [ngClass]="{ 'text-red-300 hover:text-white'  : scrollPos > 1 , 'text-white hover:text-slate-800' : scrollPos == 0}"  class=" px-10 hover:bg-white/25 hover:transition duration-1000 h-full flex items-center    "><li>Conocimiento</li></a>
-            <a (click)="toProjects();" [ngClass]="{ 'text-red-300 hover:text-white'  : scrollPos > 1 , 'text-white hover:text-slate-800' : scrollPos == 0}"  class=" px-10 hover:bg-white/25 hover:transition duration-1000 h-full flex items-center    "><li>Proyectos</li></a>
-            <a (click)="toContact();" [ngClass]="{ 'text-red-300 hover:text-white'  : scrollPos > 1 , 'text-white hover:text-slate-800' : scrollPos == 0}"  class=" px-10 hover:bg-white/25 hover:transition duration-1000 h-full flex items-center    "><li>Contacto</li></a>
+        <ul [ngClass]="menuResponsive == true ? '' : 'hidden '" class="w-full flex-col absolute left-0  md:top-0  top-24 border-t-2 border-red-300 md:border-0 h-full w-full md:justify-end  md:flex md:ml-auto  md:flex-row  hover:cursor-pointer  ">
+            <a (click)="toInfo();" [ngClass]="{ ' hover:text-white'  : scrollPos > 1 , 'text-white hover:text-red-300' : scrollPos == 0 , 'justify-center' : menuResponsive}" class="text-red-300 px-2 lg:px-10 bg-slate-800 md:bg-transparent hover:bg-white/25 hover:transition duration-500 h-full flex items-center   "><li>Sobre mi</li></a>
+            <a (click)="toKnowledge();" [ngClass]="{ 'hover:text-white'  : scrollPos > 1 , 'text-white hover:text-red-300' : scrollPos == 0, 'justify-center' : menuResponsive}"   class="text-red-300  px-2 lg:px-10 bg-slate-800 md:bg-transparent hover:bg-white/25 hover:transition duration-500 h-full flex items-center    "><li>Conocimiento</li></a>
+            <a (click)="toProjects();" [ngClass]="{ 'hover:text-white'  : scrollPos > 1 , 'text-white hover:text-red-300' : scrollPos == 0 , 'justify-center' : menuResponsive}"  class="text-red-300  px-2 lg:px-10 bg-slate-800 md:bg-transparent hover:bg-white/25 hover:transition duration-500 h-full flex items-center    "><li>Proyectos</li></a>
+            <a (click)="toContact();" [ngClass]="{ 'hover:text-white'  : scrollPos > 1 , 'text-white hover:text-red-300' : scrollPos == 0 , 'justify-center' : menuResponsive}"  class="text-red-300  px-2 lg:px-10 bg-slate-800 md:bg-transparent hover:bg-white/25 hover:transition duration-500 h-full flex items-center    "><li>Contacto</li></a>
             
         </ul>
         
-
+        <div class="flex items-center md:hidden h-full ml-auto h-24 ">
+            <img (click)="menu()" class="h-1/2" src="assets/{{icon}}.png" alt="">
+        </div>
 
 
         
     </div>
+
+    
 
 
 
 </header>
 
 
+
+
+
+
 <!-- Enlaces laterales -->
-<div class="flex flex-col justify-end  h-full ">
+<div class="hidden lg:flex flex-col justify-end  h-full ">
 
     <div class="fixed  right-0 z-20 top-1/2" >
         <!-- hover:w-48 -->
-        <button class="mt-60 bg-green-300 h-16 w-20 hover:w-48 rounded-l-full  ease-in-out transition-all duration-500 drop-shadow-2xl opacity-75 hover:opacity-100 "><a href="https://wa.me/56979708095"><img class="mx-auto h-12" src="assets/wsp.png" alt=""></a></button>
+        <button class="mt-60 bg-green-300 h-16 w-20 hover:w-48 rounded-l-full  ease-in-out transition-all duration-500 drop-shadow-2xl opacity-75 hover:opacity-100 "><a target="_blank" href="https://wa.me/56979708095"><img class="mx-auto h-12" src="assets/wsp.png" alt=""></a></button>
     </div>
 
     <div class="fixed  right-0 z-20 top-1/2 " >
         <!-- hover:w-48 -->
-        <button class="mt-40 bg-blue-300 h-16 w-20 hover:w-48 rounded-l-full  ease-in-out  transition-all  duration-500 drop-shadow-2xl opacity-75 hover:opacity-100"><a href="https://www.linkedin.com/in/bryan-paredes/"><img class="mx-auto h-12" src="assets/linkedin.svg" alt=""></a></button>
+        <button class="mt-40 bg-blue-300 h-16 w-20 hover:w-48 rounded-l-full  ease-in-out  transition-all  duration-500 drop-shadow-2xl opacity-75 hover:opacity-100"><a target="_blank" href="https://www.linkedin.com/in/bryan-paredes/"><img class="mx-auto h-12" src="assets/linkedin.svg" alt=""></a></button>
     </div>
     <div class="fixed  right-0 z-20 top-1/2 " >
         <!-- hover:w-48 -->
-        <button class="mt-20 bg-slate-300 h-16 w-20 hover:w-48 rounded-l-full  ease-in-out  transition-all  duration-500 drop-shadow-2xl opacity-75 hover:opacity-100"><a href="https://github.com/BrParedes"><img class="mx-auto h-12" src="assets/github.png" alt=""></a></button>
+        <button class="mt-20 bg-slate-300 h-16 w-20 hover:w-48 rounded-l-full  ease-in-out  transition-all  duration-500 drop-shadow-2xl opacity-75 hover:opacity-100"><a target="_blank" href="https://github.com/BrParedes"><img class="mx-auto h-12" src="assets/github.png" alt=""></a></button>
     </div>
     <div class="fixed  right-0 z-20 top-1/2 " >
         <!-- hover:w-48 -->
-        <button class=" bg-red-300 h-16 w-20 hover:w-48 rounded-l-full  ease-in-out  transition-all  duration-500 drop-shadow-2xl opacity-75 hover:opacity-100"><a href="assets/cv/CV_BRYAN_PAREDES.pdf"><div class="place-items-center flex h-12 w-12 rounded-full bg-white mx-auto "><p class="w-full flex justify-center text-red-300 font-extrabold text-2xl">CV</p></div></a></button>
+        <button class=" bg-red-300 h-16 w-20 hover:w-48 rounded-l-full  ease-in-out  transition-all  duration-500 drop-shadow-2xl opacity-75 hover:opacity-100"><a target="_blank" href="assets/cv/CV_BRYAN_PAREDES.pdf"><div class="place-items-center flex h-12 w-12 rounded-full bg-white mx-auto "><p class="w-full flex justify-center text-red-300 font-extrabold text-2xl">CV</p></div></a></button>
     </div>
 
 
     
-    <div id="boton" class="z-10 flex fixed bottom-24 right-40">
+    <div id="boton" class="z-10 fixed bottom-24 right-40 hidden md:flex">
         <div [ngClass]="{'rotate-180': sectionPosition == 4  }" class="invisible h-14 w-14 hover:scale-125 transition-all duration-500 mx-auto">
             <img  (click)="toNextSection();" class="hover:cursor-pointer  h-14 w-14 revealButton mx-auto flex justify-center bottom-20" src="assets/down-arrow2.png"  >
             

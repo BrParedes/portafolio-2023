@@ -11,6 +11,7 @@ import { FooterComponent } from './footer/footer.component';
 import { ProyectosComponent } from './proyectos/proyectos.component';
 import { ContactoComponent } from './contacto/contacto.component';
 import { CarouselComponent } from './carousel/carousel.component';
+import { Conocimientos2Component } from './conocimientos2/conocimientos2.component';
 
 
 @NgModule({
@@ -23,7 +24,8 @@ import { CarouselComponent } from './carousel/carousel.component';
     FooterComponent,
     ProyectosComponent,
     ContactoComponent,
-    CarouselComponent
+    CarouselComponent,
+    Conocimientos2Component
   
   ],
   imports: [

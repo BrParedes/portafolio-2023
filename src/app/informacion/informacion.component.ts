@@ -12,7 +12,7 @@ export class InformacionComponent implements OnInit {
   constructor(private scrollRevealService: ScrollRevealService) { }
 
   ngOnInit(): void {
-    this.scrollRevealService.seccionTitle('.seccionTitle' );
+    this.scrollRevealService.seccion('.seccionTitle' );
     this.scrollRevealService.reveal('.text' );
     this.scrollRevealService.reveal2('.img' );
 

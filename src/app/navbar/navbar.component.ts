@@ -9,9 +9,10 @@ export class NavbarComponent implements OnInit {
   title : string = "<Bryan Paredes/>";
   scrollPos : number = 0;
   sectionPosition: number = 0;
-  
+  menuResponsive : Boolean = false;
   sectionPositionArray : Array<number> = [];
-
+  menuIcons = ["open-menu","close-menu"]
+  icon : string = this.menuIcons[0];
 
   constructor() {
 
@@ -141,4 +142,12 @@ export class NavbarComponent implements OnInit {
     
     
   };
+
+  menu(){
+    
+    this.menuResponsive = !this.menuResponsive;
+    
+    if(this.menuResponsive) {this.icon = this.menuIcons[1]}else{this.icon = this.menuIcons[0]}
+
+  }
 }

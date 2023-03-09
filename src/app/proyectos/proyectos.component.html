@@ -1,154 +1,34 @@
-<div id="proyectos" class=" h-screen bg-slate-800 py-12 px-32 h-screen scroll-mt-20 ">
+<div id="proyectos" class=" bg-slate-900 py-12 px-4 lg:px-32 scroll-mt-20 ">
     <!-- Titulo seccion -->
-    <div class="w-full w-3/4 mx-auto text-5xl text-white flex seccionTitle ">
+    <div class="text-3xl md:text-5xl text-white flex  w-full lg:w-3/4 lg:mx-auto font-bold  seccionTitle">
         <h1 class="underline-offset-8 underline  decoration-red-300 transition">Proyectos</h1>
     </div>
     
-    <div class="py-12 ">
-        <div class="w-3/4 mx-auto  grid grid-rows-1 grid-cols-3 gap-8">
-
-           <!-- tarjetas de proyectos -->
-            <div class="proyecto1 w-full border-2 border-solid border-red-300 rounded-lg h-min ">
-                <!-- Nombre -->
-                <h1 class=" text-3xl text-red-300 font-light flex flex-row justify-center items-center h-16 border-b-2 border-red-300">
-                    Joyeria Daliostra
-                </h1>
+    <div  class="w-full lg:w-3/4 mx-auto grid grid-rows-3 md:grid-rows-none grid-cols-1 md:grid-cols-1 lg:grid-cols-3  gap-4 md:gap-4  my-12 seccionTitle">
+        
+        <div *ngFor="let p of projectList" class="border border-red-300 border-2 lg:max-w-sm bg-white  rounded-lg shadow dark:bg-gray-800 dark:border-red-300 min-w-fill ">
+            <div>
                 
-                <div class="max-h-min">
-                    <!-- Imagen -->
-                    <div  class="" data-bs-toggle="modal" data-bs-target="#exampleModalXl1">
+                <img class="rounded-t-lg h-52 object-cover w-full" src="assets/{{p.cardImage}}" alt="" />
+            </div>
+            <div class="p-5 " >
+                <div>
+                    <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">{{p.nombre}}</h5>
+                </div>
+                <p class="mb-3 font-normal text-gray-700 dark:text-gray-400 text-justify">{{p.description}}</p>
+                <div [ngClass]="{'hidden' : !p.habilitado}" class="flex flex-row gap-2 justify-end flex-wrap content-end h-full">
+                    <a href="{{p.enlace}}" class="transition duration-500 border border-2 border-red-300 inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-red-300 rounded-lg hover:bg-red-400 focus:ring-4 focus:outline-none focus:ring-red-400 dark:bg-transparent dark:hover:bg-red-300 dark:focus:ring-red-300">
+                        Visitar sitio
                         
-                        <div class="relative flex justify-center cursor-pointer hover:opacity-50 transition-all ease-in-out ">
-                            <div class="z-10 absolute top-0 left-0 w-full h-full duration-500  ">
-                                <img class="h-52 w-full px-28 py-6 mx-auto opacity-0 hover:opacity-75  duration-250 "src="assets/look.png" alt="">
-                            </div>
-                            <img  class="h-52 w-full  " src="assets/daliostra/inicio.png" alt="">
-                            
-                        </div>  
-                    </div>
-
-                    <div class="h-40 py-2 px-4 text-justify text-white">
-                        <p class="leading-relaxed text-xl text-ellipsis">Sitio Web E-Commerce para la comercializacion de productos de la empresa <b class="font-bold text-red-300">Daliostra Ltda.</b>, cuenta con pasarela de pago FLOW.</p>
-                    </div>
-                    
-                    <a href="https://www.joyasdaliostra.cl/">
-                        <div class="flex justify-center items-center bg-red-300 hover:bg-red-500 duration-500 rounded-b-md w-full h-12">
-                            <p href="#" class="text-white text-lg" >Visitar Sitio Web</p>
-                        </div>
                     </a>
                     
-                    
-                    
-                </div>
-                
-            </div>
-            
-
-
-            <div class="proyecto2 w-full border-2 border-solid border-red-300 rounded-lg h-min  ">
-                <!-- Nombre -->
-                <h1 class="text-3xl text-red-300 font-light flex flex-row justify-center items-center h-16 border-b-2 border-red-300">
-                    A-Sure Trim
-                </h1>
-                
-                <div >
-                    <!-- Imagen -->
-                   
-
-                    <div data-bs-toggle="modal" data-bs-target="#exampleModalXl2" class="relative flex justify-center cursor-pointer hover:opacity-50 transition-all ease-in-out ">
-                        <div class="z-10 absolute top-0 left-0 w-full h-full duration-500  ">
-                            <img class="h-52 w-full px-28 py-6 mx-auto opacity-0 hover:opacity-75  duration-250 "src="assets/look.png" alt="">
-                        </div>
-                        <img  class="h-52 w-full  " src="assets/asuretrim/asuretrim1.png" alt="">
-                        
-                    </div>
-
-                    <div class="h-40 py-2 px-4 text-justify text-white">
-                        <p class="text-xl leading-relaxed break-words">Pagina de aterrizaje de la Empresa<b class="font-bold text-red-300"> A-Sure Trim</b> y su sucursal <b class="font-bold text-red-300">CM-Maderera</b>, presenta Información del empresa y sus productos. 
-                    </div>
-
-                       <!--  <div class="col-span-1"  data-bs-toggle="modal" data-bs-target="#exampleModalXl2">
-                            <img class="h-52 w-full object-cover hover:opacity-50    hover:cursor-pointer transition-all    " src="assets/asuretrim/asuretrim1.png" alt="">
-                        </div> -->
-                        <!-- Descripcion -->
-                        <!-- <div class="text-white text-xl col-span-2">
-                            <div class=" p-4 leading-loose text-justify ">        
-                                <p class=""> Pagina de aterrizaje de la Empresa A-Sure Trim y su sucursal CM-Maderera, presenta Información del empresa y sus productos. </p>
-                                <p class="text-red-300">Tecnologias:</p>
-                                <ul class="text-white ">
-                                    <p>PHP</p>
-                                </ul>
-                        </div>
-                        
-                 
-
-
-                      </div> -->
-                    
-                    
-
-                    <a href="http://asuretrim.com/view/en/home/">
-                        <div class="flex justify-center items-center bg-red-300 hover:bg-red-500 duration-500 rounded-b-md w-full h-12">
-                            <p href="#" class="text-white text-lg" >Visitar Sitio Web</p>
-                        </div>
-                    </a>
-                    
-                </div>
-                
-            </div>
-
-            
-            <div class="proyecto3 w-full border-2 border-solid border-red-300 rounded-lg h-min ">
-                <!-- Nombre -->
-                <h1 class="text-3xl text-red-300 font-light flex flex-row justify-center items-center h-16 border-b-2 border-red-300">
-                    Proximamente
-                </h1>
-                
-                <div class="max-h-min">
-                    <!-- Imagen -->
-                    <div class="  ">
-                        
-                        <img  class=" h-52 w-full   hover:opacity-50  hover:cursor-pointer transition-all ease-int-out " src="assets/coming-soon.jpg" alt="">
-                            
-                       
-
-                        
-                            
-                        
-                        
-                    </div>
-
-                    <div class="h-40 py-2 px-4 text-justify text-white">
-                        <p class="text-xl leading-relaxed break-words">Mis proximos proyectos seran publicados aqui.    </p>
-                    </div>
-                    
-                    <button class="bg-red-300 hover:bg-red-500 duration-500 rounded-b-md w-full h-12">
-                        <a href="#" class="text-white text-lg" >Visitar Sitio Web</a>
+                    <button data-bs-toggle="modal" [attr.data-bs-target]="'#modal'+p.modalTarget"  (click)="sendData(p.id)" class=" transition duration-500 border border-2 border-red-300 inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-red-300 rounded-lg hover:bg-red-400 focus:ring-4 focus:outline-none focus:ring-red-400 dark:bg-transparent dark:hover:bg-red-300 dark:focus:ring-red-300">
+                        Mas Detalles 
+                        <img class="w-4 h-4 ml-2 -mr-1" src="assets/search.svg " alt="">
                     </button>
-                    
-                    
+
                 </div>
-                
             </div>
-            
-           
-
-           
-
-            
-
-
         </div>
-
-        
-
     </div>
-    
-   <!--  <div class="w-full mx-auto ">
-        <div class="h-14 w-14 hover:scale-125 transition-all duration-500 mx-auto">
-            <img (click)="toNextSection();" class="hover:cursor-pointer  h-14 w-14 revealButton mx-auto flex justify-center bottom-20" src="assets/down-arrow2.png"  >
-        </div>
-        
-    </div> -->
-
 </div>

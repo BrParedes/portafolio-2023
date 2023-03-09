@@ -15,10 +15,10 @@ export class ScrollRevealService {
     this.sr.reveal(element, {
       duration: 1000,
       delay: 0,
-      distance: '500px',
-      easing: 'ease-in',
-      origin: 'bottom ',
-      reset: true,
+      distance: '100px',
+      easing: 'ease-in-out',
+      
+      reset: false,
       viewFactor: 0.2
     });
   }
@@ -60,15 +60,15 @@ export class ScrollRevealService {
     });
   }
 
-  seccionTitle(element: string) {
+  seccion(element: string) {
     
     this.sr.reveal(element, {
       duration: 1500,
-      delay: 0,
-      distance: '500px',
-      easing: 'ease-out',
-      origin: 'right',
-      reset: true,
+      delay: 100,
+      distance: '100px',
+      easing: 'ease-in-out',
+      origin: 'bottom',
+      reset: false,
       viewFactor: 0.2
     });
   }

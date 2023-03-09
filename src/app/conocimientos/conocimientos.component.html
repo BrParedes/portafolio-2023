@@ -1,12 +1,12 @@
-<div id="conocimientos" class=" h-screen bg-slate-800 py-12 px-32 scroll-mt-20 "><!-- bg-slate-800 -->
+<div id="conocimientos" class=" bg-slate-900 py-12 px-4 lg:px-32 scroll-mt-20 "><!-- bg-slate-800 -->
     <!-- Titulo seccion -->
-    <div class="seccionTitle  text-5xl text-white flex  w-3/4 mx-auto font-semibold text-5xl">
+    <div class="seccionTitle  text-3xl md:text-5xl text-white flex  lg:w-3/4 lg:mx-auto font-bold text-5xl">
         <h1 class="underline-offset-8 underline  decoration-red-300 transition">Conocimientos</h1>
     </div>
     
-    <div class="scrollT2 grid grid-cols-4 w-3/4 mx-auto rounded-lg   my-12 ">
+    <div class="scrollT2 grid grid-cols-4 w-full lg:w-3/4 mx-auto rounded-lg   my-12 ">
         
-        <ul class="col-span-1 text-3xl text-red-300 border-r-2 border-red-300">
+        <ul class="text-2xl lg:text-3xl text-red-300 border-r-2 border-red-300">
             <li [ngClass]="{'text-white bg-slate-700 text-white ': cursosButton == true }"  (click)="menuKnowledge(1);" class="hover:bg-slate-700 border-red-300 hover:text-white hover:cursor-pointer transition duration-500  border-y-2 "><p [ngClass]="{'translate-x-6': cursosButton == true }" class="py-8 transition duration-500 hover:translate-x-6 h-full">Cursos</p></li>
             <li [ngClass]="{'text-white bg-slate-700 text-white  ': langButton == true }"  (click)="menuKnowledge(2);" class="hover:bg-slate-700 border-red-300 hover:text-white hover:cursor-pointer transition duration-500  border-b-2 "><p [ngClass]="{'translate-x-6 ': langButton == true }"class="py-8 transition duration-500 hover:translate-x-6 h-full">Lenguajes</p></li>
             <li [ngClass]="{'text-white bg-slate-700 text-white': frameButton == true }"  (click)="menuKnowledge(3);" class="hover:bg-slate-700 border-red-300 hover:text-white hover:cursor-pointer transition duration-500  border-b-2 "><p [ngClass]="{'translate-x-6': frameButton == true }"class="py-8 transition duration-500 hover:translate-x-6 h-full">Frameworks</p></li>
