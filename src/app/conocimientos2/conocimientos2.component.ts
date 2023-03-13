@@ -45,4 +45,8 @@ export class Conocimientos2Component implements OnInit {
   }
 
 
+  mostrarInfo(){
+    console.log("hola")
+  }
+
 }

@@ -20,7 +20,7 @@ export class ProyectosComponent implements OnInit {
 
 
   ngOnInit(): void {
-    
+    this.scrollRevealService.seccion('.seccionTitle' );
     
 
     this.projectList = [

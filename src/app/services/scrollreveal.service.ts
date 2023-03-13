@@ -30,7 +30,7 @@ export class ScrollRevealService {
       distance: '50px',
       easing: 'ease-out',
       origin: 'top',
-      reset: true,
+      reset: false,
       viewFactor: 0.2
     });
   }

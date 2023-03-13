@@ -14,6 +14,7 @@ import { CarouselComponent } from './carousel/carousel.component';
 import { Conocimientos2Component } from './conocimientos2/conocimientos2.component';
 
 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -30,7 +31,8 @@ import { Conocimientos2Component } from './conocimientos2/conocimientos2.compone
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    
   ],
   providers: [],
   bootstrap: [AppComponent]

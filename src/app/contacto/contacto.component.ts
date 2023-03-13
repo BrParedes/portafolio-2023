@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ScrollRevealService } from '../services/scrollreveal.service';
 
 import emailjs, { EmailJSResponseStatus } from '@emailjs/browser';
 
@@ -9,14 +10,14 @@ import emailjs, { EmailJSResponseStatus } from '@emailjs/browser';
 })
 export class ContactoComponent implements OnInit {
  
+  constructor(private scrollRevealService: ScrollRevealService) { }
+
   emailSuccess : boolean = false;
   emailError : boolean = false;
   texto: string = "Enviar";
-  constructor(){
-   
-  }
+  
   ngOnInit(): void {
-    
+    this.scrollRevealService.seccion('.seccionTitle' );
     
   }
   

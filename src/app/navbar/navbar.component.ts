@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit , HostListener  } from '@angular/core';
 
 @Component({
   selector: 'app-navbar',
@@ -6,6 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./navbar.component.css']
 })
 export class NavbarComponent implements OnInit {
+
   title : string = "<Bryan Paredes/>";
   scrollPos : number = 0;
   sectionPosition: number = 0;
@@ -15,11 +16,15 @@ export class NavbarComponent implements OnInit {
   icon : string = this.menuIcons[0];
 
   constructor() {
+   /*  this.mediaQueryList = window.matchMedia('(min-width: 768px)'); */
 
     document.addEventListener('scroll', () => {
       this.prueba();
     })
    }
+
+
+  
   
   ngOnInit(): void {
     document.addEventListener("DOMContentLoaded", () => {
@@ -80,7 +85,7 @@ export class NavbarComponent implements OnInit {
   };
 
   toInfo():void { 
-    
+
     const x : any = document.getElementById( 'info' );
 
     x.scrollIntoView({
@@ -88,7 +93,8 @@ export class NavbarComponent implements OnInit {
       duration: 2000,
       block: 'start'
     }); 
-
+    this.menuResponsive = false;
+    this.icon = this.menuIcons[0]
 
   };
   toProjects():void { 
@@ -99,7 +105,8 @@ export class NavbarComponent implements OnInit {
       behavior: 'smooth' 
     }); 
 
-
+    this.menuResponsive = false;
+    this.icon = this.menuIcons[0]
   };
   toKnowledge():void { 
     
@@ -109,11 +116,14 @@ export class NavbarComponent implements OnInit {
       behavior: 'smooth' 
     }); 
 
-
+    this.menuResponsive = false;
+    this.icon = this.menuIcons[0]
   };
 
 
   toContact():void { 
+    this.menuResponsive = false;
+    this.icon = this.menuIcons[0]
     
     const x : any = document.getElementById( 'contact' );
 
@@ -121,7 +131,7 @@ export class NavbarComponent implements OnInit {
       behavior: 'smooth' 
     }); 
 
-
+    
   };
 
 
@@ -144,7 +154,6 @@ export class NavbarComponent implements OnInit {
   };
 
   menu(){
-    
     this.menuResponsive = !this.menuResponsive;
     
     if(this.menuResponsive) {this.icon = this.menuIcons[1]}else{this.icon = this.menuIcons[0]}
